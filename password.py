@@ -7,3 +7,15 @@ uusparool = input("Sisesta oma uus parool: ")
 
 if len(uusparool) < 8 or len(uusparool) > 64:
      print("parool on vale pikkusega")
+
+ 
+"""kontrollin kas sisaldab v2hemalt yhte suurt t2hte"""
+
+sisaldabsuur = False
+
+for symbol in uusparool:
+        if symbol.isupper():
+            sisaldabsuur = True
+
+if sisaldabsuur == False:
+    print("parool peab sisaldama v2hemalt yhte suurt t2hte")    
