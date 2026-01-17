@@ -18,4 +18,14 @@ for symbol in uusparool:
             sisaldabsuur = True
 
 if sisaldabsuur == False:
-    print("parool peab sisaldama v2hemalt yhte suurt t2hte")    
+    print("parool peab sisaldama v2hemalt yhte suurt t2hte")  
+
+"""kontrollin kas sisaldab v2hemalt yhte väikest t2hte"""
+
+sisaldabväike = False
+
+for symbol in uusparool:
+        if symbol.islower():
+            sisaldabväike = True
+if sisaldabväike == False:
+    print("parool peab sisaldama vähemalt yhte väikest tähte")  
