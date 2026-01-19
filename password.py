@@ -23,13 +23,6 @@ if nimi[::-1] in uusparool:
     print("Parool ei tohi sisaldada nime tagurpidi")
 
 
-
-
-
-
-
-
-
 """kontrollin kas parool on 6ige pikkusega(8-64)"""
 
 if len(uusparool) < 8 or len(uusparool) > 64:
@@ -56,3 +49,15 @@ for symbol in uusparool:
             sisaldabväike = True
 if sisaldabväike == False:
     print("parool peab sisaldama vähemalt yhte väikest tähte")  
+
+for symbol in uusparool:
+     if symbol.isspace():
+        print("Ei tohi olla tyhikut")
+        break
+     
+alnum = False    
+for symbol in uusparool:
+     if not symbol.isalnum():
+            alnum = True
+if alnum == False:
+    print("parool ")
